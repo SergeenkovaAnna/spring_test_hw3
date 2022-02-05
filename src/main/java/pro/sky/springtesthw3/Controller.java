@@ -21,26 +21,26 @@ public class Controller {
     }
 
     @GetMapping(path = "/plus")
-    public String sum(@RequestParam(required = true) int num1,
-                      @RequestParam(required = true) int num2) {
+    public int sum(@RequestParam(required = true) int num1,
+                   @RequestParam(required = true) int num2) {
         return Service.calculateSum(num1, num2);
     }
 
     @GetMapping(path = "/minus")
-    public String subtration(@RequestParam(required = true) int num1,
-                             @RequestParam(required = true) int num2) {
+    public int subtration(@RequestParam(required = true) int num1,
+                          @RequestParam(required = true) int num2) {
         return Service.subtract(num1, num2);
     }
 
     @GetMapping(path = "/multiply")
-    public String multiply(@RequestParam(required = true) int num1,
-                           @RequestParam(required = true) int num2) {
+    public int multiply(@RequestParam(required = true) int num1,
+                        @RequestParam(required = true) int num2) {
         return Service.multiply(num1, num2);
     }
 
     @GetMapping(path = "devide")
-    public String devide(@RequestParam(required = true) int num1,
-                         @RequestParam(required = true) int num2) {
+    public int devide(@RequestParam(required = true) int num1,
+                      @RequestParam(required = true) int num2) {
         return Service.devide(num1, num2);
     }
 }
